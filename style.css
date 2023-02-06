@@ -208,15 +208,6 @@ main {
 
 /* PRODUTOS */
 /* MANUTENÇÃO */
-
-.manutencao-fundo {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0.1;
-    z-index: -1;
-}
-
 .manutencao {
     height: 70vh;
     padding-top: 80px;
@@ -250,19 +241,17 @@ span {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 150px 80px 150px;
+    padding: 0 150px 80px 150px;
     height: 100%;
+    background-image: url("assets/conserto.jpg");
+    background-size: cover;
 }
 
-
 /* MANUTENÇÃO */
-
-.fundo-footer {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0.1;
-    z-index: -1;
+#endereco {
+    background-image: url("assets/endereco.jpg");
+    background-size: cover;
+    height: 100vh;
 }
 
 .endereco {
@@ -384,10 +373,14 @@ footer {
     }
 
     /* PRODUTOS */
-    .card-container, .column, .endereco{
+    .card-container, .endereco{
         margin: 0 40px;
         align-items: center;
         padding: 20px 0;
+    }
+
+    .column {
+        padding: 0 40px;
     }
 
     .card-grid {
@@ -405,14 +398,8 @@ footer {
     }
 
     /* SERVIÇOS */
-    .manutencao-fundo { 
-        height: 616px;
-        object-fit: cover;
-    }
-
     .column {
-        height: auto;
-        margin: 0;
+        height: 650px;
         padding: 0 0 20px 0;
     }
 
@@ -477,8 +464,13 @@ footer {
 }
 
 @media screen and (max-width: 376px) {
-    .card-container, .column, .endereco{
+    .card-container, .endereco{
         margin: 0 20px;
+    }
+
+    .column {
+        height: auto;
+        padding: 0 20px 20px 20x;
     }
 
     .mobile-btn {
@@ -514,7 +506,7 @@ footer {
         margin-bottom: 40px;
     }
 
-    .card-container, .column, .endereco{
+    .card-container, .endereco{
         margin: 0 10px;
     }
     
@@ -523,6 +515,8 @@ footer {
     }
 
     .column {
-        height: 80vh;
+        padding: 0 10px;
+        height: auto;
+        padding-bottom: 20px;
     }
 }
